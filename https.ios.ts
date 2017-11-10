@@ -1,4 +1,4 @@
-// 
+//
 
 import * as application from 'application'
 import { HttpRequestOptions, Headers, HttpResponse } from 'http'
@@ -104,8 +104,10 @@ export function request(opts: Https.HttpsRequestOptions): Promise<Https.HttpsRes
 				'HEAD': 'HEADParametersSuccessFailure',
 			}
 			manager[methods[opts.method]](opts.url, serializeBody(opts.body, cTypeJSON), function success(task: NSURLSessionDataTask, data: any) {
+console.log("success: " + JSON.stringify(data))
 				AFSuccess(resolve, task, data)
 			}, function failure(task, error) {
+console.log("fail")
 				AFFailure(resolve, reject, task, error)
 			})
 
