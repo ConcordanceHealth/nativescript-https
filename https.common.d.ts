@@ -1,5 +1,3 @@
-// 
-
 import { HttpRequestOptions, Headers } from 'http'
 
 
@@ -9,6 +7,10 @@ export interface HttpsSSLPinningOptions {
 	certificate: string
 	allowInvalidCertificates?: boolean
 	validatesDomainName?: boolean
+}
+
+export interface HttpsRequestObject {
+	[key: string]: string | number
 }
 
 export interface HttpsRequestOptions {
@@ -26,15 +28,4 @@ export interface HttpsResponse {
 	reason?: string
 	reject?: boolean
 }
-
-
-
-
-
-
-
-
-
-
-
 
