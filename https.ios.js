@@ -72,7 +72,7 @@ function request(opts) {
             manager_1.responseSerializer = AFHTTPResponseSerializer.serializer();
             manager_1.requestSerializer.allowsCellularAccess = true;
             manager_1.securityPolicy = (policies.secured == true) ? policies.secure : policies.def;
-            manager_1.requestSerializer.timeoutInterval = 10;
+            manager_1.requestSerializer.timeoutInterval = 60;
             var heads_1 = opts.headers;
             if (heads_1) {
                 Object.keys(heads_1).forEach(function (key) {
