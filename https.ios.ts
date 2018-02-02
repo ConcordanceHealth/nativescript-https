@@ -86,7 +86,7 @@ export function request(opts: Https.HttpsRequestOptions): Promise<Https.HttpsRes
 			manager.responseSerializer = AFHTTPResponseSerializer.serializer()
 			manager.requestSerializer.allowsCellularAccess = true
 			manager.securityPolicy = (policies.secured == true) ? policies.secure : policies.def
-			manager.requestSerializer.timeoutInterval = 10
+			manager.requestSerializer.timeoutInterval = 60
 
 			let heads = opts.headers
 			if (heads) {
