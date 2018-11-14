@@ -95,8 +95,8 @@ function getClient(reload: boolean = false): okhttp3.OkHttpClient {
 	}
 
 	let client = new okhttp3.OkHttpClient.Builder()
-	client.setConnectTimeout(30, java.util.concurrent.TimeUnit.SECONDS); // connect timeout
-        client.setReadTimeout(30, java.util.concurrent.TimeUnit.SECONDS);    // socket timeout
+	    .setConnectTimeout(30, java.util.concurrent.TimeUnit.SECONDS) // connect timeout
+            .setReadTimeout(30, java.util.concurrent.TimeUnit.SECONDS);    // socket timeout
 	
 	if (peer.enabled == true) {
 		// console.log('peer', peer)
