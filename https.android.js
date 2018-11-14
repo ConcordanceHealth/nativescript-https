@@ -55,9 +55,9 @@ function getClient(reload) {
     if (Client && reload == false) {
         return Client;
     }
-    var client = new okhttp3.OkHttpClient.Builder();
-    client.setConnectTimeout(30, java.util.concurrent.TimeUnit.SECONDS); // connect timeout
-    client.setReadTimeout(30, java.util.concurrent.TimeUnit.SECONDS);    // socket timeout
+    var client = new okhttp3.OkHttpClient.Builder()
+            .setConnectTimeout(30, java.util.concurrent.TimeUnit.SECONDS) // connect timeout
+            .setReadTimeout(30, java.util.concurrent.TimeUnit.SECONDS);    // socket timeout
     
     if (peer.enabled == true) {
         if (peer.host || peer.certificate) {
