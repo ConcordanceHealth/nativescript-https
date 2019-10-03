@@ -55,7 +55,10 @@ function getClient(reload) {
     if (Client && reload == false) {
         return Client;
     }
-    var client = new okhttp3.OkHttpClient.Builder();
+    var client = new okhttp3.OkHttpClient.Builder()
+            .connectTimeout(30, java.util.concurrent.TimeUnit.SECONDS) // connect timeout
+            .readTimeout(30, java.util.concurrent.TimeUnit.SECONDS);    // socket timeout
+    
     if (peer.enabled == true) {
         if (peer.host || peer.certificate) {
             var spec = okhttp3.ConnectionSpec.MODERN_TLS;

@@ -1,6 +1,6 @@
 # NativeScript-HTTPS
 
-> Forked by Eddy Verbruggen to be able to install from GitHub (include .js files), just in casenpm isbehind and we desperately need the latest changes.
+> Supports PA 01.00.30 and greater
 
 ### The definitive way to hit HTTP based APIs in Nativescript.
 Easily integrate the most reliable native networking libraries with the latest and greatest HTTPS security features.

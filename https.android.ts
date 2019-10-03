@@ -95,6 +95,9 @@ function getClient(reload: boolean = false): okhttp3.OkHttpClient {
 	}
 
 	let client = new okhttp3.OkHttpClient.Builder()
+            .connectTimeout(30, java.util.concurrent.TimeUnit.SECONDS) // connect timeout
+            .readTimeout(30, java.util.concurrent.TimeUnit.SECONDS);    // socket timeout
+	
 	if (peer.enabled == true) {
 		// console.log('peer', peer)
 		if (peer.host || peer.certificate) {
