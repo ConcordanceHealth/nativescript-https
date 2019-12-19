@@ -1,3 +1,6 @@
+# THIS IS NOT BEING USED IN THE PATIENT APP AS OF 01.00.78 IT HAS BEEN REPLACED BY https://docs.nativescript.org/ns-framework-modules/http
+
+
 # NativeScript-HTTPS
 
 > Supports PA 01.00.30 and greater
